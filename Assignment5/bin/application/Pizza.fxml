@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PizzaController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox style="-fx-border-width: 2; -fx-border-color: #000000;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" style="-fx-border-width: 1; -fx-border-color: #000000;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Build a Pizza" underline="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <VBox style="-fx-border-width: 1; -fx-border-color: #000000;">
+                     <children>
+                        <HBox alignment="TOP_CENTER" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Size:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <RadioButton id="Size" fx:id="sizeSmall" mnemonicParsing="false" onAction="#changeSize" text="Small">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Size" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton id="Size" fx:id="sizeMedium" mnemonicParsing="false" onAction="#changeSize" text="Medium" toggleGroup="$Size" />
+                              <RadioButton id="Size" fx:id="sizeLarge" mnemonicParsing="false" onAction="#changeSize" text="Large" toggleGroup="$Size" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cheese:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <RadioButton id="Cheese" fx:id="cheeseRegular" mnemonicParsing="false" onAction="#changeCheese" selected="true" text="Regular">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Cheese" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton id="Cheese" fx:id="cheeseDouble" mnemonicParsing="false" onAction="#changeCheese" text="Double" toggleGroup="$Cheese" />
+                              <RadioButton id="Cheese" fx:id="cheeseTriple" mnemonicParsing="false" onAction="#changeCheese" text="Triple" toggleGroup="$Cheese" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ham:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <RadioButton fx:id="hamNone" mnemonicParsing="false" onAction="#changeHam" text="None">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Ham" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton id="Ham" fx:id="hamRegular" mnemonicParsing="false" onAction="#changeHam" text="Regular" toggleGroup="$Ham" />
+                              <RadioButton id="Ham" fx:id="hamDouble" mnemonicParsing="false" onAction="#changeHam" text="Double" toggleGroup="$Ham" />
+                              <RadioButton id="Ham" fx:id="hamTriple" mnemonicParsing="false" onAction="#changeHam" text="Triple" toggleGroup="$Ham" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pepperoni:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <RadioButton fx:id="pepperoniNone" mnemonicParsing="false" onAction="#changePepperoni" text="None">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Pepperoni" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton id="Pepperoni" fx:id="pepperoniRegular" mnemonicParsing="false" onAction="#changePepperoni" selected="true" text="Regular" toggleGroup="$Pepperoni" />
+                              <RadioButton id="Pepperoni" fx:id="pepperoniDouble" mnemonicParsing="false" onAction="#changePepperoni" text="Double" toggleGroup="$Pepperoni" />
+                              <RadioButton id="Pepperoni" fx:id="pepperoniTriple" mnemonicParsing="false" onAction="#changePepperoni" text="Triple" toggleGroup="$Pepperoni" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="CENTER" spacing="15.0" style="-fx-border-width: 1; -fx-border-color: #000000;">
+                     <children>
+                        <VBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" underline="true">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField id="Quantity" fx:id="quantityField" alignment="CENTER" maxWidth="150.0" onAction="#changeQuantity" promptText="(1-100) &quot;Enter&quot; to submit">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </TextField>
+                              <RadioButton id="Quantity" fx:id="quantityOne" mnemonicParsing="false" onAction="#changeQuantity" text="One">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Quantity" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton id="Quantity" fx:id="quantityTwo" mnemonicParsing="false" onAction="#changeQuantity" text="Two" toggleGroup="$Quantity" />
+                              <RadioButton id="Quantity" fx:id="quantityThree" mnemonicParsing="false" onAction="#changeQuantity" text="Three" toggleGroup="$Quantity" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </VBox>
+                        <Button id="Submit" fx:id="addOrder" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="115.0" text="Add To Order" />
+                     </children>
+                  </HBox>
+                  <VBox style="-fx-border-width: 1; -fx-border-color: #000000;">
+                     <children>
+                        <TextArea fx:id="errorField" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Errors:" />
+                        <TextField id="PizzaC" fx:id="singleCost" editable="false" text="Single Pizza Cost:" />
+                        <TextField id="TPizzaC" fx:id="totalCost" editable="false" text="Total Pizza Cost:" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox style="-fx-border-width: 2; -fx-border-color: #000000;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" style="-fx-border-width: 1; -fx-border-color: #000000;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order" underline="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <VBox style="-fx-border-width: 1; -fx-border-color: #000000;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextArea id="DisplayOrder" fx:id="orderItems" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Order:" VBox.vgrow="ALWAYS" />
+                        <TextField id="DisplayTotal" fx:id="total" editable="false" text="Total:" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
